@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: logs1
+  labels:
+    type: local
+spec:
+  storageClassName: logs
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/var/tmp/data"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: logs2
+  labels:
+    type: local
+spec:
+  storageClassName: logs
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/var/tmp/data"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: logs3
+  labels:
+    type: local
+spec:
+  storageClassName: logs
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/var/tmp/data"
